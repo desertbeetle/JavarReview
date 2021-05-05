@@ -18,13 +18,11 @@ public class Palindrome {
 
         if (s.contains(" ")) {
             int i = s.indexOf(" ");
-            s = s.substring(0, i) + s.substring(i+1, s.length());
+            s = s.substring(0, i) + s.substring(i+1);
         }
 
-        s.split(" ");
         int i=0, j=s.length()-1;
         char[] chars = s.toCharArray();
-        boolean isPalindrome = true;
         while (i < j) {
             if (chars[i] != chars[j]) {
                 return false;
